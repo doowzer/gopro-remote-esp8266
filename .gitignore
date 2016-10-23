@@ -1,0 +1,6 @@
+!tools/.keep
+tools/*
+firmware
+src/config.lua
+src/test.lua
+ideas.txt

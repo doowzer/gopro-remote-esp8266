@@ -24,9 +24,12 @@ This step was pretty time-consuming, had to install all needed dependencies and 
 ```app/include/user_version.h``` - Change values for ```BUILD_DATE``` and ```NODE_VERSION``` 
  
  **3)** Download [firmware](https://github.com/nodemcu/nodemcu-firmware/releases/download/0.9.6-dev_20150704/nodemcu_float_0.9.6-dev_20150704.bin "NodeMCU 0.9.6-dev")
+ 
  I found following [firmware](https://github.com/nodemcu/nodemcu-firmware/releases/download/0.9.6-dev_20150704/nodemcu_float_0.9.6-dev_20150704.bin "NodeMCU 0.9.6-dev"). This worked out when flashed with [NodeMCU Flasher](https://github.com/nodemcu/nodemcu-flasher). 
 
 #### #2 Message: *Please run file.remove("user.lua") before first use.*
 When starting the NodeMCU devkit for the first time and connected to it following messages was printed:
+
 ```Please run file.remove("user.lua") before first use.``` 
+
 Press the RST button and the message disappeared.

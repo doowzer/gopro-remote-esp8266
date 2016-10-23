@@ -11,7 +11,10 @@ function http(url)
     client:connect(80, GOPRO_ADDR);
     client:on("connection", function(sck, c)
         sck:send(url..header)
-    end)    
+    end)
+    client:on("receive", function(sck, c)
+        print(c)
+    end)
 end
 
 function goproRecord()
@@ -34,7 +37,7 @@ gpio.mode(2, gpio.INPUT, gpio.PULLUP)
 -- Verify connection to camera, turn off LED when connected.
 tmr.alarm(TIMER_WIFI, 1000, 1, function()
     if wifi.sta.getip() == nil then
-        print("Connecting to GoPro camera...")
+        print("\nConnecting to GoPro camera...")
     else 
         tmr.stop(TIMER_WIFI)
         print("Connected to GoPro camera "..wifi.sta.getip())

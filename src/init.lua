@@ -1,4 +1,4 @@
-print("\n*** Bunker GoPro Remote ***\n")
+print("\n*** gopro-remote-esp8266 ***\n")
 
 -- Files
 l = file.list()
